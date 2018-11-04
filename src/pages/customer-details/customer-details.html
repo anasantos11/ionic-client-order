@@ -12,18 +12,11 @@
 
 <ion-content padding>
   <ion-grid>
-
+    
     <ion-row>
       <ion-col>
         <p>Customer ID:</p>
         <h3>{{customer[0]}}</h3>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col>
-        <p>Last Name:</p>
-        <h3>{{customer[1]}}</h3>
       </ion-col>
     </ion-row>
 
@@ -34,12 +27,38 @@
           {{customer[2]}}
         </h3>
       </ion-col>
+      <ion-col>
+        <p>Last Name:</p>
+        <h3>{{customer[1]}}</h3>
+      </ion-col>
     </ion-row>
-
     <ion-row>
       <ion-col>
         <p>Favorite Website:</p>
         <h3>{{customer[3]}}</h3>
+      </ion-col>
+    </ion-row>
+    <hr/>
+    <ion-row>
+      <ion-col>
+        <h5>Customer Orders</h5>
+        <p *ngIf="showNoHasOrders">There aren't orders for this customer.</p>
+        <ion-list>
+          <ion-item *ngFor="let order of orders">
+            <ion-grid text-center>
+              <ion-row>
+                <ion-col>
+                  <p>Order ID</p>
+                  <h3>{{order.order_id}}</h3>
+                </ion-col>
+                <ion-col>
+                  <p>Order Date </p>
+                  <h3>{{order.order_date | date: 'dd/MM/yyyy H:mm'}}</h3>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
