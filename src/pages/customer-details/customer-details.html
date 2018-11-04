@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Customer Details</ion-title>
+
+    <ion-buttons end padding>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+
+    <ion-row>
+      <ion-col>
+        <p>Customer ID:</p>
+        <h3>{{customer[0]}}</h3>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p>Last Name:</p>
+        <h3>{{customer[1]}}</h3>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p>First Name:</p>
+        <h3>
+          {{customer[2]}}
+        </h3>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p>Favorite Website:</p>
+        <h3>{{customer[3]}}</h3>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
