@@ -8,6 +8,7 @@ import {HomePage} from '../pages/customer/customer';
 import {StatusBar} from '@ionic-native/status-bar';
 import {SplashScreen} from '@ionic-native/splash-screen';
 import {CustomerService} from "../services/domain/customer.service";
+import {OrderService} from "../services/domain/order.service";
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
@@ -27,6 +28,7 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   providers: [
     CustomerService,
+    OrderService,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
